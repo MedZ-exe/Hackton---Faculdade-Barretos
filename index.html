@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #24292e;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .welcome-container {
+            text-align: center;
+            background-color: #C0C0C0;
+            padding: 20px;
+            border-radius: 8px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header {
+            background-color: #24292e;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            animation: colorChange 3s infinite, textGlow 2s infinite;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .follow-button {
+            background-color: #f66d33;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .follow-button:hover {
+            background-color: #e65926;
+        }
+
+        .follow-button:active {
+            transform: translateY(2px);
+        }
+
+        #logo {
+            position: absolute;
+            top: 10px; /* Ajuste essa distância conforme necessário */
+            left: 10px; /* Ajuste essa distância conforme necessário */
+        }
+
+        #participants-button {
+            position: absolute;
+            top: 10px; /* Ajuste essa distância conforme necessário */
+            right: 10px; /* Ajuste essa distância conforme necessário */
+            background-color: #e65926;
+            color: #fff;
+            border: none;
+            padding: 10px 50px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #participants-button:hover {
+            background-color: #e65926;
+        }
+
+        #participants-list {
+            display: none;
+            position: absolute;
+            top: 50px; /* Ajuste essa distância conforme necessário */
+            right: 10px; /* Ajuste essa distância conforme necessário */
+            background-color: #C0C0C0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #participants-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #participants-list li {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #24292e;
+            }
+            50% {
+                color: #f66d33;
+            }
+            100% {
+                color: #24292e;
+            }
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 5px rgba(246, 109, 51, 0.7);
+            }
+            50% {
+                text-shadow: 0 0 10px rgba(246, 109, 51, 0.7);
+            }
+            100% {
+                text-shadow: 0 0 5px rgba(246, 109, 51, 0.7);
+            }
+        }
+    </style>
+
+    <title>Bem-vindo ao Hackathon</title>
+</head>
+<body>
+    <img src="https://faculdadebarretos.edu.br/images/faculdade%20barretos-01.png" alt="Logo da Faculdade Barretos" id="logo">
+    <div class="welcome-container">
+        <header>
+            <h1>Hackathon Faculdade Barretos</h1>
+            <p>Bem - Vindos</p>
+        </header>
+        <main>
+            <p>
+                
+            </p>
+        </main>
+        <main>
+            <p>
+        
+            </p>
+            <button class="follow-button" onclick="redirectToProject()">Clique para seguir para o projeto</button>
+        </main>
+    
+
+    <script>
+        function showParticipantsList() {
+            var participantsList = document.getElementById('participants-list');
+            if (participantsList.style.display === 'none' || participantsList.style.display === '') {
+                participantsList.style.display = 'block';
+            } else {
+                participantsList.style.display = 'none';
+            }
+        }
+
+        function redirectToProject() {
+            // Adicione aqui a ação para redirecionar para a página do projeto.
+            alert('Redirecionar para a página do projeto');
+        }
+    </script>
+</body>
+</html>
